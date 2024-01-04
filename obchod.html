@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- Základní údaje o stránce -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camping Lovers</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<!-- Hlavní část stránky -->
+<body>
+    <!--Horní část obsahující logo, menu, hledání a odkaz na košík-->
+    <header>
+        <!--Horní část hlavičky obsajující logo a menu-->
+        <div class="header_upper">
+            <a class="logo" href="./index.html">
+                <picture>
+                    <source media="(min-width:1000px)" srcset="./images/logo_desktop.png" alt="Logo obchodu" />
+                    <img src="./images/logo_mobil.png" alt="Logo obchodu">
+                </picture>
+            </a>
+            <!--Rozbalovací menu-->
+            <div class="button_menu">
+                <p id="menu_name">Menu</p>
+                <button class="menu_icon" title="Tlačítko menu"></button>
+                <!--Obsah rozbalovacího menu-->
+                <div class="menu_content">
+                    <ul id="menu_clothing">
+                        <li><a href="./index.html" title="Návrat domů">Domů</a></li>
+                        <li><a href="./obchod_bundy.html" title="Kategorie bundy">Bundy</a></li>
+                        <li><a href="./obchod_bundy.html" title="Kategorie kalhoty">Kalhoty</a></li>
+                        <li><a href="./obchod_bundy.html" title="Kategorie rukavice">Rukavice</a></li>
+                        <li><a href="./obchod_bundy.html" title="Kategorie ponožky">Ponožky</a></li>
+                        <li><a href="./obchod_bundy.html" title="Kategorie boty">Boty</a></li>
+                        <li><a href="./obchod_bundy.html" title="Kategorie příslušenství">Příslušenství</a></li>
+                        <li><a href="./obchod_bundy.html" title="Kategorie stany">Stany</a></li>
+                        <li><a href="./obchod_bundy.html" title="Kategorie na vaření">Na vaření</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Spodní část hlavičky obsahující hledání a košík-->
+        <div class="header_lower">
+            <div class="search_section">
+                <input class="search" type="text" placeholder="   Hledat..." title="Pole vyhledávání" />
+                <button class="order_button_light" onclick="location.href = './bunda.html';" title="Tlačítko vyhledávání">Hledej</button>
+            </div>
+            <a class="cart_icon" href="./kosik_krok1.html">
+                <img src="./images/cart.png" alt="Odkaz do košíku" />
+            </a>
+        </div>
+    </header>
+    <!--Obsahová část-->
+    <main>
+        <section class="first_section">
+            <h1>Oblečení</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum luctus molestie. Vestibulum arcu nisi, fringilla quis enim consectetur, venenatis iaculis augue. Vestibulum in erat sagittis, feugiat est a, faucibus dui. Nunc tempor mi metus, eu condimentum tellus consectetur eu.
+            </p>
+            <article>
+                <figure>
+                    <a href="./obchod_bundy.html"><img src="./images/bundy_mobil.png" alt="Kategorie Bundy"></a>
+                    <figcaption>Bundy</figcaption>
+                </figure>
+                <figure>
+                    <a href="./obchod_bundy.html"><img src="./images/kalhoty_mobil.png" alt="Kategorie Kalhoty"></a>
+                    <figcaption>Kalhoty</figcaption>
+                </figure>
+                <figure>
+                    <a href="./obchod_bundy.html"><img src="./images/rukavice_mobil.png" alt="Kategorie Rukavice"></a>
+                    <figcaption>Rukavice</figcaption>
+                </figure>
+                <figure>
+                    <a href="./obchod_bundy.html"><img src="./images/ponozky_mobil.png" alt="Kategorie Ponožky"></a>
+                    <figcaption>Ponožky</figcaption>
+                </figure>
+                <figure>
+                    <a href="./obchod_bundy.html"><img src="./images/boty_mobil.png" alt="Kategorie Boty"></a>
+                    <figcaption>Boty</figcaption>
+                </figure>
+                <hr />
+            </article>
+        </section>
+        <!--Stručný popis e-shopu-->
+        <aside class="aside_cart">
+            <h1>O Nás</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum luctus molestie. Vestibulum arcu nisi, fringilla quis enim consectetur, venenatis iaculis augue. Vestibulum in erat sagittis, feugiat est a, faucibus dui. Nunc tempor mi metus, eu condimentum tellus consectetur eu.
+            </p>
+        </aside>
+    </main>
+    <!-- Patička obchodu -->
+    <footer>
+        <div class="footer_content">
+            <!--Upozornění na skutečnost, že se jedná o studentský projekt a ne skutečný e-shop-->
+            <div class="creators">
+                <p>
+                    <span>
+                        <b>
+                            Toto je studentský projekt pro předmět Webdesign na PEF ČZU
+                        </b>
+                    </span>
+                <p>Autoři projektu jsou:</p>
+                <ul>
+                    <li>
+                        Roman Kočvara
+                    </li>
+                    <li>
+                        Aleš Petrák
+                    </li>
+                    <li>
+                        Adam Cinke
+                    </li>
+                </ul>
+            </div>
+            <hr class="div_footer" />
+            <!--Sekce kontaktních údajů-->
+            <div class="contact_table">
+                <h2>Kontakty</h2>
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td>info@campinglovers.com</td>
+                    </tr>
+                    <tr>
+                        <td>Telefon:</td>
+                        <td>+123 456 789</td>
+                    </tr>
+                </table>
+            </div>
+            <!--Sekce sociálních sítí-->
+            <hr class="div_footer" />
+            <div class="social_media_section">
+                <a id="fb" href="https://www.instagram.com/"><img src="./images/instagram.svg" alt="Odkaz na Instagram" /></a>
+                <a id="inst" href="https://www.facebook.com/"><img src="./images/facebook.svg" alt="Odkaz na Facebook" /></a>
+            </div>
+            <hr class="div_footer" />
+            <!--Sekce kontaktních údajů a mappy-->
+            <address>
+                <p>Kempovací 123</p>
+                <p>110 00 Praha</p>
+            </address>
+            <picture>
+                <source media="(min-width:1000px)" srcset="./images/mapa_desktop.png" alt="Mapa do naší prodejny" />
+                <img src="./images/mapa_mobil.png" alt="Mapa do naší prodejny" />
+            </picture>
+            <!--Struktura stránky-->
+            <nav>
+                <ul class="page_structure">
+                    <li class="actíve_panel"><a href="./index.html">Domů</a></li>
+                    <li><a href="./obchod.html">Obchod</a></li>
+                    <li><a href="./o_nas.html">O nás</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--Ochraná známka-->
+        <p>&copy; 2023 Camping Lovers</p>
+    </footer>
+    <!--JavaScript pro rozbalování a skrývání menu v hlavičce-->
+    <script>
+        var coll = document.getElementsByClassName("menu_icon");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    content.style.maxWidth = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.maxWidth = content.scrollWidth + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,944 @@
+/* Proměnné vztažené k celému dokumentu */
+:root {
+    --custom_brown: rgba(103,75,0,1);
+    --light_brown: rgba(103,75,0,0.2);
+    --custom_grey:rgba(112,112,112,1);
+}
+/* Obecné styly */
+html {
+    font-family: sans-serif,Arial, Helvetica
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+figure {
+    background-color: var(--light_brown);
+    margin-inline: 10px;
+    display: flex;
+    flex-flow: column;
+    border-radius: 10px;
+}
+
+figcaption {
+    color: var(--custom_brown);
+    font-weight: 900;
+    font-size: large;
+}
+
+aside {
+    display: none;
+}
+
+body {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    padding: 0px;
+    text-align: center;
+    font-size:medium;
+}
+
+header {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: auto;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 5px;
+    width: 100%;
+}
+
+button {
+    margin: 5px;
+    background-color: white;
+}
+
+a {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+}
+
+label {
+    align-self:center;
+    font-size: medium;
+}
+
+li {
+    list-style-type: none;
+    margin-inline: 5px;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    border-radius: 0.1px;
+    border: 0.5px solid var(--custom_brown);
+}
+
+.item_delimiter {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    border-radius: 15px;
+    border-style:none;
+    outline:solid;
+    outline-width:0.2px;
+}
+
+.order_buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.order_buttons .order_button_dark, .order_buttons .order_button_light {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-self: center;
+    width: 40%;
+}
+
+.creators{
+    color:black;
+}
+
+.first_section {
+    margin-top: 170px;
+}
+
+.product_count {
+    display: flex;
+    border-style: solid;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: none;
+    width: 80%;
+    margin-inline: 10px;
+    text-align: center;
+}
+
+
+.order_summary, .order_and_payment, .order_button, .product_review_secton{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.order_button_light {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    font-size: large;
+    background-color: white;
+    color: var(--custom_brown);
+    border-style: solid;
+    border-color: var(--custom_brown);
+    border-width: 0.5px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.order_button_dark {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    font-size: large;
+    background-color: var(--custom_brown);
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.order_button_light:active {
+    box-shadow: 0 2px var(--custom_brown);
+    transform: translateY(1px) translateX(1px);
+}
+
+.order_button_dark:active {
+    box-shadow: 0 2px var(--custom_brown);
+    transform: translateY(1px) translateX(1px);
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    margin: 5px;
+    align-self: center;
+}
+
+/* Stylování částí hlavičky */
+
+/* Horní část hlavičky */
+
+.header_upper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 0px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.button_menu {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-end;
+    text-align: center;
+    margin-right: 40px;
+}
+
+#menu_name {
+    align-self: center;
+}
+
+.menu_icon {
+    cursor: pointer;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border: none;
+    justify-content: right;
+    align-self: center;
+    background: url(./images/menu.svg);
+}
+
+.menu_content {
+    background-color: white;
+    max-height: 0px;
+    max-width: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out,max-width 0.2s ease-out;
+    display: block;
+    text-align: left;
+}
+
+    .menu_content ul {
+        padding: 5px;
+        margin: 0px;
+        border: 0.5px solid var(--custom_brown);
+        border-radius: 10px;
+    }
+
+        .menu_content ul li {
+            font-weight: 900;
+            border-bottom: 0.5px thin var(--custom_brown);
+        }
+
+    .menu_content a {
+        text-decoration: none;
+        padding-right: 5px;
+        color: var(--custom_brown);
+    }
+
+/* Spodní část hlavičky */
+
+.header_lower {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.cart_icon {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border: none;
+    justify-content: right;
+    align-self: center;
+    margin-right: 40px;
+}
+.search_section {
+    justify-content: left;
+    width:100%;
+}
+    .search_section button {
+        margin-left:0px;
+
+    }
+    .search {
+        width: 40%;
+        display: flex;
+        min-width: 33%;
+        max-width: 50%;
+        align-self: center;
+        border-radius: 10px;
+        min-height: 30px;
+        border-color: var(--custom_brown);
+        border-width: 0.5px;
+        font-size: 20px;
+    }
+/* Sekce O nás*/
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-bottom:25px;
+}
+
+/* Stránka bunda */
+
+.rating {
+    display: flex;
+    width: 100%;
+}
+
+.sizes {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    background-color: var(--light_brown);
+    border-color: var(--custom_brown);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 25px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.sizes_buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+	color: white;
+	background-color: var(--custom_brown);
+}
+
+.product_count_selection {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+
+.product_parameters_table {
+    display: flex;
+    align-self: center;
+    background-color: var(--light_brown);
+    border-color: var(--custom_brown);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 25px;
+    width: 90%;
+}
+
+.product_parameters_table > tbody {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex-wrap: wrap;
+    width: inherit;
+}
+
+    .product_parameters_table > tbody > tr > td:nth-child(odd) {
+        display: flex;
+        align-self: start;
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .product_parameters_table > tbody > tr > td:nth-child(even) {
+        display: flex;
+        align-self: start;
+        width: 100%;
+        justify-content: center;
+    }
+
+
+
+    .product_parameters_table > tbody > tr {
+        display: flex;
+        justify-content: space-around;
+        height: fit-content;
+        width: 100%;
+    }
+
+.product_review_summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.user_review_summary {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+    .user_review_summary > p {
+        margin-left: 5px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+.user_review_text {
+    display: block;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.user_review_social {
+    display: flex;
+    justify-content: right;
+    margin-left: 5px;
+    max-width: 70px;
+    height: 32px;
+    align-self: end;
+    margin-right: 20px;
+}
+
+.next_review {
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.sizes > .sizes_buttons > button {
+    width: 32px;
+    height: 32px;
+    border-color: black;
+    border-width: 0.5px;
+    border-style: solid;
+    max-width: 50%;
+}
+
+    .sizes > .sizes_buttons > button:first-child {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .sizes > .sizes_buttons > button:last-child {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .sizes > .sizes_buttons > button:active {
+        color: white;
+        background-color: var(--custom_brown);
+    }
+
+.product_other_sides {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+    .product_other_sides img {
+        margin: 5px;
+        max-width: max-content;
+        max-height: max-content
+    }
+
+    #bunda_main_image {
+        width: 100%;
+        margin-bottom: 15px;
+        max-width: max-content;
+        max-height: max-content;
+    }
+
+/* Stránky košíku */
+
+.cart_list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2,155px);
+    gap: 5px;
+}
+
+    .cart_list p {
+        display: flex;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+.cart_item {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(4,38.5px);
+    height: max-content;
+    width: 100%;
+    border-color: var(--custom_brown);
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+.cart_item_img {
+    grid-column: 1;
+    grid-row: 1/4;
+}
+
+.cart_item_name {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+.cart_item_price {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+}
+
+.cart_item_stock {
+    grid-column: 2;
+    grid-row: 4;
+    color: forestgreen;
+    align-self: center;
+    justify-self: center;
+}
+
+.cart_item_count {
+    grid-column: 2;
+    grid-row: 2/3;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+    .cart_item_count input {
+        margin: 5px;
+        text-align: center;
+        align-self: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.order_summary_item, .transport_type, .payment_type {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    font-size: small;
+    width: 100%;
+}
+
+.transport_type_input, .payment_type_input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: max-content;
+}
+
+    .transport_type label, .payment_type_input label {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+    }
+    
+.order_summary_item p {
+    display: flex;
+    flex-direction: row;
+    font-size: x-large;
+    margin: 0px;
+    align-self: center;
+}
+
+    .order_summary_item p:last-child {
+        font-size: small;
+        width: 100%;
+    }
+
+    .input_value {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    
+        .input_value input:required:invalid, .product_count:required:invalid {
+            border-color: red;
+        }
+    
+    .order_conditions input {
+        border-color: red;
+        border-style: solid;
+        border-width: 0.5px;
+    }
+    
+    .cart_nav {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        border-style: solid;
+        border-color: black;
+        border-width: 0.5px;
+        border-radius: 10px;
+        height: 40px;
+        width: 100%;
+        font-size: smaller;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+        background-color: white;
+    }
+    
+    .cart_nav_item {
+        display: flex;
+        flex-direction: row;
+        border-style: none;
+        width: 33%;
+        font-size: smaller;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        background-color: white;
+        padding-left: 5px;
+        border-radius: 15px;
+    }
+    
+        .cart_nav_item a {
+            text-decoration: none;
+            color: black;
+            height: 100%;
+            width: 100%;
+            font-size: medium;
+        }
+    
+    .cart_active_nav {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        background-color: var(--custom_brown);
+        color: white;
+        align-items: center;
+        justify-content: center;
+        width: 34%;
+    }
+    
+        .cart_active_nav a {
+            display: flex;
+            color: white;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            font-size: medium;
+        }
+    
+        .cart_active_nav:first-child {
+            border-top-left-radius: 9px;
+            border-bottom-left-radius: 9px;
+        }
+    
+        .cart_active_nav:last-child {
+            border-top-right-radius: 9px;
+            border-bottom-right-radius: 9px;
+        }
+    
+    .input_value label {
+        display: flex;
+        width: 100%;
+        font-weight: 600;
+    }
+    
+    .input_value input {
+        display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: var(--custom_brown);
+        border-width: 0.3px;
+        margin: 5px;
+    }
+    
+    .order_conditions {
+        display: flex;
+        flex-direction: row;
+        margin: 15px;
+    }
+    
+    .star {
+        color: red;
+        font-size: x-small;
+    }
+
+/* Stránka obchodu bund */
+.jackets_section_header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+    .jackets_section_header img {
+        display: flex;
+        align-self: flex-end;
+    }
+
+.jacket_list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4,155px);
+    gap: 15px;
+}
+
+.jacket_item {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(3,50px);
+    height: max-content;
+    width: 100%;
+    border-color: var(--custom_brown);
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+    .jacket_item button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+        width: 90%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+.jacket_list .jacket_name_price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .jacket_list .jacket_name_price p {
+        margin: 0px;
+    }
+
+#jacket_img {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1/3;
+}
+
+#jacket_1_order_button, #jacket_2_order_button, #jacket_3_order_button, #jacket_4_order_button {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+#jacket_1_details_button, #jacket_2_details_button, #jacket_3_details_button, #jacket_4_details_button {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+}
+
+/* Stránka potvrzení odeslání objednávky */
+
+.thank_you_text {
+    color: forestgreen;
+    font-size: large;
+}
+
+.order_complete {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--custom_brown);
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+    footer a:link {
+        color: cyan;
+    }
+
+    footer a:visited {
+        color: darkcyan;
+    }
+
+    footer a:active {
+        color: white;
+    }
+
+.contact_table {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    max-width: inherit;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_media_section {
+    display: grid;
+    grid-template-columns: 32px 32px;
+    grid-gap: 5px;
+    max-width: 70px;
+    justify-content: left;
+    color: white;
+    flex-shrink: 1;
+    width:100%;
+}
+
+    .social_media_section img {
+        height: 32px;
+        width: 32px;
+        fill: white;
+    }
+
+.page_structure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding-left: 0px;
+    width: 100%;
+}
+
+    .page_structure li {
+        padding-right: 20px;
+    }
+
+footer table {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    border-width: 0.5px;
+}
+
+.div_footer {
+    border-color: var(--custom_grey);
+    border-style: solid;
+    border-width: 0.5px;
+    width:99%;
+}
+/* Úpravy pro zobrazení na velkých obrazovkách */
+@media screen and (min-width: 1000px) {
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+    }
+
+    .first_section, .order_complete {
+        margin-top: 300px;
+    }
+
+    .product_other_sides {
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 1;
+    }
+
+        .product_other_sides img {
+            display: flex;
+            flex-shrink: 1;
+            height: max-content;
+            width: max-content;
+        }
+
+    hr {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+  /*  section{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    article{
+        display:flex;
+        max-width:fit-content;
+
+    }*/
+
+}
